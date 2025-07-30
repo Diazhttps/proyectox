@@ -1,0 +1,193 @@
+.login-container {
+  min-height: 100vh;
+   background-color: hsla(203.53846153846155, 82%, 30%, 1);
+    background-image: radial-gradient(circle at 102% 80%, hsla(267.62589928057554, 67%, 59%, 1) 0%, transparent 40.308866813608354%), radial-gradient(circle at 39% 44%, hsla(203.2710280373832, 89%, 46%, 1) 0%, transparent 42.69144621670061%);
+    background-blend-mode: normal, normal;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.form-box {
+  background: white;
+  border-radius: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 0.6s ease-out;
+}
+
+.form-header {
+  background: linear-gradient(135deg, #8B5CF6, #3B82F6);
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.form-header .icon {
+  animation: pulse 2s infinite;
+  margin-bottom: 1rem;
+}
+
+.form-body {
+  padding: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9CA3AF;
+}
+
+.input {
+  width: 80%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #8B5CF6;
+  background: #F3E8FF;
+}
+
+.input.error {
+  border-color: #F87171;
+  background: #FEE2E2;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #9CA3AF;
+  cursor: pointer;
+}
+
+.error-message {
+  color: #DC2626;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to right, #8B5CF6, #3B82F6);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #7C3AED, #2563EB);
+  transform: scale(1.02);
+}
+
+.submit-error {
+  background: #FEE2E2;
+  border: 1px solid #FCA5A5;
+  color: #B91C1C;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.forgot-password,
+.register-link {
+  text-align: right;
+  font-size: 0.875rem;
+}
+
+.register-link button {
+  background: none;
+  border: none;
+  color: #8B5CF6;
+  cursor: pointer;
+}
+
+.success-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  animation: slideInUp 0.6s ease-out;
+}
+
+.checkmark-container {
+  animation: bounceIn 0.8s ease-out 0.3s both;
+  margin-bottom: 1.5rem;
+}
+
+.checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}

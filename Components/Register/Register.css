@@ -1,0 +1,185 @@
+/* Contenedor principal del registro */
+.register-wrapper {
+  min-height: 100vh;
+  background-color: hsla(220.91, 30%, 14%, 1);
+  background-image:
+    radial-gradient(circle at 0% 5%, hsla(225, 56%, 60%, 0.7) 3.12%, transparent 40%),
+    radial-gradient(circle at 23% 3%, hsla(210.44, 96%, 48%, 0.37) 3.12%, transparent 76.42%),
+    radial-gradient(circle at 100% 93%, hsla(186.62, 70%, 55%, 0.21) 3.12%, transparent 45.38%),
+    radial-gradient(circle at 96% 103%, hsla(120.44, 76%, 39%, 0.1) 3.12%, transparent 50%),
+    radial-gradient(circle at 80% 0%, hsla(158.82, 80%, 48%, 0.23) 3.12%, transparent 24.82%);
+  background-blend-mode: normal, normal, normal, normal, normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Caja del formulario */
+.register-form-container {
+  background: linear-gradient(to bottom right, #18171b6c, #4338CA);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 28rem;
+  width: 100%;
+  padding:  2.5rem;
+  animation: slideInUp 0.6s ease-out;
+  color: #374151;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Header corregido */
+.register-header {
+  background: linear-gradient(135deg, #613db652, #3B82F6);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.75rem;
+  user-select: none;
+  margin-bottom: 1.5rem;
+}
+
+
+/* Inputs con grupo */
+.register-input-group {
+  margin-bottom: 1.2rem;
+  animation: fadeInUp 0.6s ease-out both;
+  position: relative;
+}
+
+.register-input-group:nth-child(1) { animation-delay: 0.1s; }
+.register-input-group:nth-child(2) { animation-delay: 0.2s; }
+.register-input-group:nth-child(3) { animation-delay: 0.3s; }
+
+/* Inputs */
+.register-input-group input {
+  width: 85%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #E5E7EB;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-input-group input:focus {
+  border-color: #8B5CF6;
+  background-color: #FAF5FF;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.register-input-group input.error {
+  border-color: #EF4444;
+  background-color: #FEF2F2;
+}
+
+.register-input-group input.error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* Mensajes de error */
+.register-error-message {
+  color: #EF4444;
+  font-size: 0.875rem;
+  margin-top: 0.3rem;
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Botón submit */
+.register-submit-btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, #8B5CF6, #3B82F6);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+.register-submit-btn:hover {
+  background: linear-gradient(to right, #7C3AED, #2563EB);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+.register-submit-btn:active {
+  transform: scale(0.95);
+}
+
+.register-submit-btn:disabled {
+  background: #6c8fca;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Mensaje de éxito */
+.register-success-message {
+  color: #10B981;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  text-align: center;
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Link a login */
+.register-footer {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #fff;
+}
+
+.register-footer button {
+  background: none;
+  border: none;
+  color: #8B5CF6;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+  margin-left: 0.3rem;
+}
+
+.register-footer button:hover {
+  color: #7C3AED;
+  text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+  20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
